@@ -30,17 +30,20 @@ const itensSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(buscarItens.fulfilled, (state, { payload }) => {
-      return payload;
-    });
+    builder
+      .addCase(buscarItens.fulfilled, (state, { payload }) => {
+        return payload;
+      })
+      .addCase(buscarItens.pending, (state, { payload }) => {
+        console.log("carregando itens");
+      })
+      .addCase(buscarItens.rejected, (state, { payload }) => {
+        console.log("busca de itens rejeitada!");
+      });
   },
 });
 
-export const {
-  mudarFavorito,
-  cadastrarItem,
-  mudarItem,
-  deletarItem,
-} = itensSlice.actions;
+export const { mudarFavorito, cadastrarItem, mudarItem, deletarItem } =
+  itensSlice.actions;
 
 export default itensSlice.reducer;
