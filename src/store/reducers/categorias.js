@@ -31,7 +31,7 @@ const categoriasSlice = createSlice({
           title: "Carregando",
           description: "Carregando categorias",
           status: "loading",
-          duration: 2000,
+          duration: 1000,
           isClosable: true,
         });
       })

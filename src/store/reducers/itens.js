@@ -49,7 +49,7 @@ const itensSlice = createSlice({
           title: "Carregando",
           description: "Carregando itens",
           status: "loading",
-          duration: 2000,
+          duration: 1000,
           isClosable: true,
         });
       })
